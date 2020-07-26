@@ -1,4 +1,4 @@
-# unity-test-runner-asset-test-shortcode
+# UnityTestRunnerAssetTestShortcode
 
 This project is an attempt to validate multiple assets with TestRunner.
 
