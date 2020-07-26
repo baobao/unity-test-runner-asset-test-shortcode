@@ -47,7 +47,7 @@ public class AssetTest
     }
 
     /// <summary>
-    /// Validate
+    /// Validation, one file at a time
     /// </summary>
     private bool Validate(string path)
     {
@@ -56,19 +56,19 @@ public class AssetTest
 
         if (asset == null)
         {
-            Debug.LogError($"{fileName} => assetがnullです");
+            Debug.LogError($"{fileName} => asset is null");
             return false;
         }
 
         if (string.IsNullOrEmpty(asset.id))
         {
-            Debug.LogError($"{fileName} => IDが未入力です");
+            Debug.LogError($"{fileName} => ID is null or empty");
             return false;
         }
 
         if (asset.id.IndexOf("A", StringComparison.Ordinal) != 0)
         {
-            Debug.LogError($"{fileName} => 命名規則が違います : {asset.id}");
+            Debug.LogError($"{fileName} => The naming conventions are different. : {asset.id}");
             return false;
         }
 
